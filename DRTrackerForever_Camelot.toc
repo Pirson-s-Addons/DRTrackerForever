@@ -96,6 +96,7 @@
 ## Notes-viVN: |cFF33CCFFHiệu quả giảm dần (DR) của khống chế trên mục tiêu, mục tiêu tập trung và bạn, cho WoW Forever.|r
 
 ## SavedVariables: DRTrackerForeverDB
+## X-Curse-Project-ID: 1744981
 
 # Solo WoW Forever: el sufijo _Camelot es el game type que busca ese cliente, y
 # sin un .toc generico ningun otro cliente lista el addon.
