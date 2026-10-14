@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- PORTUGUÊS (ptBR)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "ptBR" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Geral"
+L["DRAG_HINT"] = "Arraste para mover"
+L["LOCK"] = "Travar posição"
+L["VERSION"] = "Versão:"
+L["AUTHOR"] = "Autor:"
+L["LINKS"] = "Links"
+L["COMMANDS"] = "Comandos"
+L["SELECT"] = "Selecionar"
+L["SELECT_TOOLTIP"] = "Seleciona o link inteiro para você copiá-lo com Ctrl+C. O WoW não deixa addons escreverem na área de transferência, então o último passo é seu."
+L["CMD_OPEN"] = "Abre as configurações."
+L["DEFAULTS"] = "Valores padrão"
+L["UNLOCKED"] = "Ícones desbloqueados: arraste-os e depois digite /drf lock."
+L["LOCKED"] = "Ícones bloqueados."
+L["CLEARED"] = "DR rastreados apagados."
+L["SHOW_HEADER"] = "Mostrar DR em"
+L["SHOW_TARGET"] = "Seu alvo"
+L["SHOW_TARGET_TOOLTIP"] = "Ícones acima do quadro do alvo. O texto e a borda mostram quanto dura o próximo controle desse tipo: 50%, 25% ou 0% (imune). A espiral mostra quando reinicia."
+L["SHOW_FOCUS"] = "Seu foco"
+L["SHOW_FOCUS_TOOLTIP"] = "Os mesmos ícones acima do quadro de foco."
+L["SHOW_PLAYER"] = "Você"
+L["SHOW_PLAYER_TOOLTIP"] = "DR dos controles usados em você, acima do seu quadro de jogador."
+L["TRACK_HEADER"] = "Rastreamento"
+L["NPCS"] = "Rastrear também PNJs"
+L["NPCS_TOOLTIP"] = "Desligado: só jogadores inimigos. Ligado: também criaturas, útil para testar o addon."
+L["GROUP"] = "Controles do seu grupo"
+L["GROUP_TOOLTIP"] = "Também conta os controles que os membros do grupo usam no alvo deles, não só os seus."
+L["RESET_TIME"] = "Reinício do DR"
+L["RESET_TIME_TOOLTIP"] = "Segundos depois do fim de um controle até o próximo voltar a durar inteiro."
+L["LOOK_HEADER"] = "Aparência"
+L["LOCK_TOOLTIP"] = "Desbloqueie para arrastar os ícones do alvo, do foco e do jogador para qualquer lugar da tela."
+L["SIZE"] = "Tamanho dos ícones"
+L["SIZE_TOOLTIP"] = "Tamanho dos ícones de DR."
+L["SHOW_TEXT"] = "Próxima duração sob o ícone"
+L["SHOW_TEXT_TOOLTIP"] = "50%: o próximo dura metade. 25%: um quarto. 0%: imune. A borda tem a mesma cor."
+L["PREVIEW"] = "Pré-visualizar"
+L["PREVIEW_TOOLTIP"] = "Mostra ícones de exemplo por 20 segundos."
+L["ABOUT_DESC"] = "Retornos decrescentes (DR) dos controles no seu alvo, no seu foco e em você, para WoW Forever. O Forever esconde o registro de combate dos addons, então o DR é contado pelos seus lançamentos e os do seu grupo e pelos efeitos que o jogo deixa ver. As configurações estão em Geral."
+L["CMD_UNLOCK"] = "Desbloqueia os ícones para poder arrastá-los."
+L["CMD_LOCK"] = "Bloqueia os ícones no lugar."
+L["CMD_TEST"] = "Mostra ícones de exemplo por 20 segundos."
+L["CMD_CLEAR"] = "Esquece todo DR rastreado."
+L["OPTIONS_TITLE"] = "Opções do DR Tracker Forever"

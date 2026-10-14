@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- FRANÇAIS (frFR)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "frFR" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Général"
+L["DRAG_HINT"] = "Faites glisser pour déplacer"
+L["LOCK"] = "Verrouiller la position"
+L["VERSION"] = "Version :"
+L["AUTHOR"] = "Auteur :"
+L["LINKS"] = "Liens"
+L["COMMANDS"] = "Commandes"
+L["SELECT"] = "Sélectionner"
+L["SELECT_TOOLTIP"] = "Sélectionne le lien entier pour que tu puisses le copier avec Ctrl+C. WoW ne laisse pas les addons écrire dans le presse-papiers, la dernière étape est donc pour toi."
+L["CMD_OPEN"] = "Ouvre les réglages."
+L["DEFAULTS"] = "Valeurs par défaut"
+L["UNLOCKED"] = "Icônes déverrouillées : déplacez-les, puis tapez /drf lock."
+L["LOCKED"] = "Icônes verrouillées."
+L["CLEARED"] = "DR suivis effacés."
+L["SHOW_HEADER"] = "Afficher les DR sur"
+L["SHOW_TARGET"] = "Votre cible"
+L["SHOW_TARGET_TOOLTIP"] = "Icônes au-dessus du cadre de la cible. Le texte et la bordure indiquent la durée du prochain contrôle de ce type : 50 %, 25 % ou 0 % (immunisé). La spirale indique sa réinitialisation."
+L["SHOW_FOCUS"] = "Votre focalisation"
+L["SHOW_FOCUS_TOOLTIP"] = "Les mêmes icônes au-dessus du cadre de focalisation."
+L["SHOW_PLAYER"] = "Vous"
+L["SHOW_PLAYER_TOOLTIP"] = "DR des contrôles subis, au-dessus de votre cadre de joueur."
+L["TRACK_HEADER"] = "Suivi"
+L["NPCS"] = "Suivre aussi les PNJ"
+L["NPCS_TOOLTIP"] = "Désactivé : seulement les joueurs ennemis. Activé : aussi les créatures, pratique pour essayer l'addon."
+L["GROUP"] = "Contrôles de votre groupe"
+L["GROUP_TOOLTIP"] = "Compte aussi les contrôles lancés par les membres de votre groupe sur leur cible, pas seulement les vôtres."
+L["RESET_TIME"] = "Réinitialisation des DR"
+L["RESET_TIME_TOOLTIP"] = "Secondes après la fin d'un contrôle avant que le suivant dure de nouveau entièrement."
+L["LOOK_HEADER"] = "Apparence"
+L["LOCK_TOOLTIP"] = "Déverrouillez pour déplacer les icônes de la cible, de la focalisation et du joueur n'importe où à l'écran."
+L["SIZE"] = "Taille des icônes"
+L["SIZE_TOOLTIP"] = "Taille des icônes de DR."
+L["SHOW_TEXT"] = "Prochaine durée sous l'icône"
+L["SHOW_TEXT_TOOLTIP"] = "50 % : le prochain dure la moitié. 25 % : un quart. 0 % : immunisé. La bordure a la même couleur."
+L["PREVIEW"] = "Aperçu"
+L["PREVIEW_TOOLTIP"] = "Affiche des icônes d'exemple pendant 20 secondes."
+L["ABOUT_DESC"] = "Rendements décroissants (DR) des contrôles sur votre cible, votre focalisation et vous, pour WoW Forever. Forever cache le journal de combat aux addons, donc les DR sont comptés à partir de vos sorts et de ceux de votre groupe, et des effets que le jeu laisse voir. Les réglages sont dans Général."
+L["CMD_UNLOCK"] = "Déverrouille les icônes pour pouvoir les déplacer."
+L["CMD_LOCK"] = "Verrouille les icônes à leur place."
+L["CMD_TEST"] = "Affiche des icônes d'exemple pendant 20 secondes."
+L["CMD_CLEAR"] = "Oublie tous les DR suivis."
+L["OPTIONS_TITLE"] = "Options de DR Tracker Forever"

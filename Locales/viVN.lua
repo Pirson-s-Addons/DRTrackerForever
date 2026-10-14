@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- TIẾNG VIỆT (viVN)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "viVN" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Chung"
+L["DRAG_HINT"] = "Kéo để di chuyển"
+L["LOCK"] = "Khóa vị trí"
+L["VERSION"] = "Phiên bản:"
+L["AUTHOR"] = "Tác giả:"
+L["LINKS"] = "Liên kết"
+L["COMMANDS"] = "Lệnh"
+L["SELECT"] = "Chọn"
+L["SELECT_TOOLTIP"] = "Chọn toàn bộ liên kết để bạn có thể sao chép bằng Ctrl+C. WoW không cho phép addon ghi vào bộ nhớ tạm, nên bước cuối là của bạn."
+L["CMD_OPEN"] = "Mở cài đặt."
+L["DEFAULTS"] = "Giá trị mặc định"
+L["UNLOCKED"] = "Đã mở khóa biểu tượng: kéo chúng rồi gõ /drf lock."
+L["LOCKED"] = "Đã khóa biểu tượng."
+L["CLEARED"] = "Đã xóa DR đang theo dõi."
+L["SHOW_HEADER"] = "Hiện DR trên"
+L["SHOW_TARGET"] = "Mục tiêu của bạn"
+L["SHOW_TARGET_TOOLTIP"] = "Biểu tượng phía trên khung mục tiêu. Chữ và viền cho biết lần khống chế tiếp theo cùng loại kéo dài bao lâu: 50%, 25% hoặc 0% (miễn nhiễm). Vòng xoáy cho biết khi nào đặt lại."
+L["SHOW_FOCUS"] = "Mục tiêu tập trung"
+L["SHOW_FOCUS_TOOLTIP"] = "Các biểu tượng tương tự phía trên khung tập trung."
+L["SHOW_PLAYER"] = "Bạn"
+L["SHOW_PLAYER_TOOLTIP"] = "DR của khống chế dùng lên bạn, phía trên khung nhân vật."
+L["TRACK_HEADER"] = "Theo dõi"
+L["NPCS"] = "Theo dõi cả NPC"
+L["NPCS_TOOLTIP"] = "Tắt: chỉ người chơi địch. Bật: cả sinh vật, tiện để thử addon."
+L["GROUP"] = "Khống chế của nhóm"
+L["GROUP_TOOLTIP"] = "Đếm cả khống chế mà thành viên nhóm dùng lên mục tiêu của họ, không chỉ của bạn."
+L["RESET_TIME"] = "Đặt lại DR"
+L["RESET_TIME_TOOLTIP"] = "Số giây sau khi khống chế kết thúc cho đến khi lần sau lại kéo dài đầy đủ."
+L["LOOK_HEADER"] = "Giao diện"
+L["LOCK_TOOLTIP"] = "Mở khóa để kéo biểu tượng mục tiêu, tập trung và nhân vật đến bất kỳ đâu trên màn hình."
+L["SIZE"] = "Kích thước biểu tượng"
+L["SIZE_TOOLTIP"] = "Kích thước biểu tượng DR."
+L["SHOW_TEXT"] = "Thời lượng kế tiếp dưới biểu tượng"
+L["SHOW_TEXT_TOOLTIP"] = "50%: lần sau kéo dài một nửa. 25%: một phần tư. 0%: miễn nhiễm. Viền có cùng màu."
+L["PREVIEW"] = "Xem trước"
+L["PREVIEW_TOOLTIP"] = "Hiện biểu tượng mẫu trong 20 giây."
+L["ABOUT_DESC"] = "Hiệu quả giảm dần (DR) của khống chế trên mục tiêu, mục tiêu tập trung và bạn, cho WoW Forever. Forever ẩn nhật ký chiến đấu khỏi addon, nên DR được đếm từ phép của bạn và nhóm cùng các hiệu ứng mà trò chơi cho phép thấy. Cài đặt nằm trong Chung."
+L["CMD_UNLOCK"] = "Mở khóa biểu tượng để có thể kéo."
+L["CMD_LOCK"] = "Khóa biểu tượng tại chỗ."
+L["CMD_TEST"] = "Hiện biểu tượng mẫu trong 20 giây."
+L["CMD_CLEAR"] = "Quên mọi DR đang theo dõi."
+L["OPTIONS_TITLE"] = "Tùy chọn DR Tracker Forever"

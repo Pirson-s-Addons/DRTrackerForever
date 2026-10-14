@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- 繁體中文 (zhTW)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "zhTW" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "一般"
+L["DRAG_HINT"] = "拖曳以移動"
+L["LOCK"] = "鎖定位置"
+L["VERSION"] = "版本："
+L["AUTHOR"] = "作者："
+L["LINKS"] = "連結"
+L["COMMANDS"] = "指令"
+L["SELECT"] = "選取"
+L["SELECT_TOOLTIP"] = "選取整個連結，讓你可以用 Ctrl+C 複製。WoW 不允許插件寫入剪貼簿，所以最後一步要由你完成。"
+L["CMD_OPEN"] = "開啟設定。"
+L["DEFAULTS"] = "預設值"
+L["UNLOCKED"] = "圖示已解鎖：拖曳它們，然後輸入 /drf lock。"
+L["LOCKED"] = "圖示已鎖定。"
+L["CLEARED"] = "已清除追蹤的遞減。"
+L["SHOW_HEADER"] = "顯示遞減於"
+L["SHOW_TARGET"] = "你的目標"
+L["SHOW_TARGET_TOOLTIP"] = "目標框架上方的圖示。文字和邊框顯示該類下一個控場的持續時間：50%、25% 或 0%（免疫）。旋轉陰影顯示何時重置。"
+L["SHOW_FOCUS"] = "你的專注目標"
+L["SHOW_FOCUS_TOOLTIP"] = "專注目標框架上方的相同圖示。"
+L["SHOW_PLAYER"] = "你自己"
+L["SHOW_PLAYER_TOOLTIP"] = "你身上所受控場的遞減，顯示在玩家框架上方。"
+L["TRACK_HEADER"] = "追蹤"
+L["NPCS"] = "同時追蹤NPC"
+L["NPCS_TOOLTIP"] = "關閉：只追蹤敵方玩家。開啟：也包括生物，方便測試插件。"
+L["GROUP"] = "隊伍的控場"
+L["GROUP_TOOLTIP"] = "也計算隊友對其目標施放的控場，而不只是你的。"
+L["RESET_TIME"] = "遞減重置"
+L["RESET_TIME_TOOLTIP"] = "控場結束後，下一個控場恢復完整持續時間所需的秒數。"
+L["LOOK_HEADER"] = "外觀"
+L["LOCK_TOOLTIP"] = "解鎖後可將目標、專注目標和玩家圖示拖到畫面任意位置。"
+L["SIZE"] = "圖示大小"
+L["SIZE_TOOLTIP"] = "遞減圖示的大小。"
+L["SHOW_TEXT"] = "圖示下方顯示下次持續時間"
+L["SHOW_TEXT_TOOLTIP"] = "50%：下一個持續一半。25%：四分之一。0%：免疫。邊框顏色相同。"
+L["PREVIEW"] = "預覽"
+L["PREVIEW_TOOLTIP"] = "顯示範例圖示 20 秒。"
+L["ABOUT_DESC"] = "適用於 WoW Forever 的控場遞減（DR），顯示在你的目標、專注目標和你自己身上。Forever 對插件隱藏戰鬥紀錄，因此遞減依據你和隊伍的施法以及遊戲允許插件看到的效果來計算。設定在「一般」中。"
+L["CMD_UNLOCK"] = "解鎖圖示以便拖曳。"
+L["CMD_LOCK"] = "將圖示鎖定在原位。"
+L["CMD_TEST"] = "顯示範例圖示 20 秒。"
+L["CMD_CLEAR"] = "忘記所有追蹤的遞減。"
+L["OPTIONS_TITLE"] = "DR Tracker Forever 選項"

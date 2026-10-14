@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- DEUTSCH (deDE)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "deDE" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Allgemein"
+L["DRAG_HINT"] = "Zum Verschieben ziehen"
+L["LOCK"] = "Position sperren"
+L["VERSION"] = "Version:"
+L["AUTHOR"] = "Autor:"
+L["LINKS"] = "Links"
+L["COMMANDS"] = "Befehle"
+L["SELECT"] = "Auswählen"
+L["SELECT_TOOLTIP"] = "Markiert den ganzen Link, damit du ihn mit Strg+C kopieren kannst. WoW erlaubt Addons nicht, in die Zwischenablage zu schreiben, den letzten Schritt machst also du."
+L["CMD_OPEN"] = "Öffnet die Einstellungen."
+L["DEFAULTS"] = "Standardwerte"
+L["UNLOCKED"] = "Symbole entsperrt: ziehe sie und tippe dann /drf lock."
+L["LOCKED"] = "Symbole gesperrt."
+L["CLEARED"] = "Verfolgte DR gelöscht."
+L["SHOW_HEADER"] = "DR anzeigen bei"
+L["SHOW_TARGET"] = "Deinem Ziel"
+L["SHOW_TARGET_TOOLTIP"] = "Symbole über dem Zielrahmen. Text und Rand zeigen, wie lange der nächste Kontrolleffekt dieser Art dauert: 50%, 25% oder 0% (immun). Die Spirale zeigt, wann er zurückgesetzt wird."
+L["SHOW_FOCUS"] = "Deinem Fokus"
+L["SHOW_FOCUS_TOOLTIP"] = "Dieselben Symbole über dem Fokusrahmen."
+L["SHOW_PLAYER"] = "Dir"
+L["SHOW_PLAYER_TOOLTIP"] = "DR der Kontrolleffekte auf dir, über deinem Spielerrahmen."
+L["TRACK_HEADER"] = "Verfolgung"
+L["NPCS"] = "Auch NPCs verfolgen"
+L["NPCS_TOOLTIP"] = "Aus: nur feindliche Spieler. An: auch Kreaturen, praktisch zum Ausprobieren des Addons."
+L["GROUP"] = "Kontrolleffekte deiner Gruppe"
+L["GROUP_TOOLTIP"] = "Zählt auch die Kontrolleffekte, die deine Gruppenmitglieder auf ihr Ziel wirken, nicht nur deine."
+L["RESET_TIME"] = "DR-Zurücksetzung"
+L["RESET_TIME_TOOLTIP"] = "Sekunden nach dem Ende eines Kontrolleffekts, bis der nächste wieder voll wirkt."
+L["LOOK_HEADER"] = "Aussehen"
+L["LOCK_TOOLTIP"] = "Entsperren, um die Symbole von Ziel, Fokus und Spieler beliebig auf dem Bildschirm zu verschieben."
+L["SIZE"] = "Symbolgröße"
+L["SIZE_TOOLTIP"] = "Größe der DR-Symbole."
+L["SHOW_TEXT"] = "Nächste Dauer unter dem Symbol"
+L["SHOW_TEXT_TOOLTIP"] = "50%: der nächste dauert die Hälfte. 25%: ein Viertel. 0%: immun. Der Rand hat dieselbe Farbe."
+L["PREVIEW"] = "Vorschau"
+L["PREVIEW_TOOLTIP"] = "Zeigt 20 Sekunden lang Beispielsymbole."
+L["ABOUT_DESC"] = "Abnehmende Wirkung (DR) von Kontrolleffekten auf deinem Ziel, deinem Fokus und dir, für WoW Forever. Forever verbirgt das Kampflog vor Addons, daher wird die DR aus deinen Zaubern und denen deiner Gruppe sowie aus den Effekten gezählt, die das Spiel Addons sehen lässt. Die Einstellungen sind unter Allgemein."
+L["CMD_UNLOCK"] = "Entsperrt die Symbole, damit du sie ziehen kannst."
+L["CMD_LOCK"] = "Sperrt die Symbole an ihrem Platz."
+L["CMD_TEST"] = "Zeigt 20 Sekunden lang Beispielsymbole."
+L["CMD_CLEAR"] = "Vergisst alle verfolgten DR."
+L["OPTIONS_TITLE"] = "DR Tracker Forever – Optionen"

@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- 日本語 (jaJP)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "jaJP" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "一般"
+L["DRAG_HINT"] = "ドラッグで移動"
+L["LOCK"] = "位置をロック"
+L["VERSION"] = "バージョン："
+L["AUTHOR"] = "作者："
+L["LINKS"] = "リンク"
+L["COMMANDS"] = "コマンド"
+L["SELECT"] = "選択"
+L["SELECT_TOOLTIP"] = "Ctrl+Cでコピーできるようにリンク全体を選択します。WoWはアドオンがクリップボードに書き込むことを許可していないため、最後の手順はご自身で行ってください。"
+L["CMD_OPEN"] = "設定を開きます。"
+L["DEFAULTS"] = "デフォルト値"
+L["UNLOCKED"] = "アイコンのロックを解除しました：ドラッグしてから /drf lock と入力してください。"
+L["LOCKED"] = "アイコンをロックしました。"
+L["CLEARED"] = "追跡中のDRを消去しました。"
+L["SHOW_HEADER"] = "DRを表示する対象"
+L["SHOW_TARGET"] = "ターゲット"
+L["SHOW_TARGET_TOOLTIP"] = "ターゲットフレームの上のアイコン。文字と枠は、その種類の次の行動妨害の持続時間を示します：50%、25%、0%（無効）。渦巻きはリセットまでの時間です。"
+L["SHOW_FOCUS"] = "フォーカス"
+L["SHOW_FOCUS_TOOLTIP"] = "フォーカスフレームの上に同じアイコン。"
+L["SHOW_PLAYER"] = "自分"
+L["SHOW_PLAYER_TOOLTIP"] = "自分にかかった行動妨害のDR。プレイヤーフレームの上に表示。"
+L["TRACK_HEADER"] = "追跡"
+L["NPCS"] = "NPCも追跡"
+L["NPCS_TOOLTIP"] = "オフ：敵プレイヤーのみ。オン：クリーチャーも含む。アドオンを試すのに便利です。"
+L["GROUP"] = "パーティーの行動妨害"
+L["GROUP_TOOLTIP"] = "自分のものだけでなく、パーティーメンバーがターゲットに使った行動妨害も数えます。"
+L["RESET_TIME"] = "DRリセット"
+L["RESET_TIME_TOOLTIP"] = "行動妨害が終わってから、次がまた全時間持続するまでの秒数。"
+L["LOOK_HEADER"] = "外観"
+L["LOCK_TOOLTIP"] = "ロックを解除すると、ターゲット・フォーカス・自分のアイコンを画面の好きな場所へドラッグできます。"
+L["SIZE"] = "アイコンのサイズ"
+L["SIZE_TOOLTIP"] = "DRアイコンの大きさ。"
+L["SHOW_TEXT"] = "アイコンの下に次の持続時間"
+L["SHOW_TEXT_TOOLTIP"] = "50%：次は半分。25%：4分の1。0%：無効。枠も同じ色です。"
+L["PREVIEW"] = "プレビュー"
+L["PREVIEW_TOOLTIP"] = "サンプルのアイコンを20秒間表示します。"
+L["ABOUT_DESC"] = "WoW Forever用。ターゲット、フォーカス、自分にかかる行動妨害の効果逓減（DR）。Foreverは戦闘ログをアドオンから隠すため、DRは自分とパーティーの詠唱、そしてゲームが見せてくれる効果から数えます。設定は「一般」にあります。"
+L["CMD_UNLOCK"] = "アイコンのロックを解除してドラッグできるようにします。"
+L["CMD_LOCK"] = "アイコンをその場に固定します。"
+L["CMD_TEST"] = "サンプルのアイコンを20秒間表示します。"
+L["CMD_CLEAR"] = "追跡中のDRをすべて忘れます。"
+L["OPTIONS_TITLE"] = "DR Tracker Forever の設定"

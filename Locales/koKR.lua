@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- 한국어 (koKR)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "koKR" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "일반"
+L["DRAG_HINT"] = "끌어서 이동"
+L["LOCK"] = "위치 잠금"
+L["VERSION"] = "버전:"
+L["AUTHOR"] = "제작자:"
+L["LINKS"] = "링크"
+L["COMMANDS"] = "명령어"
+L["SELECT"] = "선택"
+L["SELECT_TOOLTIP"] = "Ctrl+C로 복사할 수 있도록 링크 전체를 선택합니다. WoW는 애드온이 클립보드에 쓰는 것을 허용하지 않으므로 마지막 단계는 직접 해야 합니다."
+L["CMD_OPEN"] = "설정을 엽니다."
+L["DEFAULTS"] = "기본값"
+L["UNLOCKED"] = "아이콘 잠금 해제: 끌어서 옮긴 뒤 /drf lock 을 입력하세요."
+L["LOCKED"] = "아이콘 잠김."
+L["CLEARED"] = "추적 중인 점감 초기화."
+L["SHOW_HEADER"] = "점감 표시 대상"
+L["SHOW_TARGET"] = "대상"
+L["SHOW_TARGET_TOOLTIP"] = "대상 프레임 위의 아이콘. 글자와 테두리는 그 종류의 다음 군중 제어가 얼마나 지속되는지 보여줍니다: 50%, 25% 또는 0%(면역). 나선은 초기화 시점입니다."
+L["SHOW_FOCUS"] = "주시 대상"
+L["SHOW_FOCUS_TOOLTIP"] = "주시 대상 프레임 위에 같은 아이콘."
+L["SHOW_PLAYER"] = "나"
+L["SHOW_PLAYER_TOOLTIP"] = "나에게 걸린 군중 제어의 점감, 플레이어 프레임 위에 표시."
+L["TRACK_HEADER"] = "추적"
+L["NPCS"] = "NPC도 추적"
+L["NPCS_TOOLTIP"] = "끄기: 적 플레이어만. 켜기: 생물도 포함, 애드온을 시험할 때 유용합니다."
+L["GROUP"] = "파티의 군중 제어"
+L["GROUP_TOOLTIP"] = "내 것뿐 아니라 파티원이 대상에게 사용한 군중 제어도 셉니다."
+L["RESET_TIME"] = "점감 초기화"
+L["RESET_TIME_TOOLTIP"] = "군중 제어가 끝난 뒤 다음 것이 다시 전부 지속될 때까지의 초."
+L["LOOK_HEADER"] = "모양"
+L["LOCK_TOOLTIP"] = "잠금을 풀면 대상, 주시 대상, 플레이어 아이콘을 화면 어디로든 끌 수 있습니다."
+L["SIZE"] = "아이콘 크기"
+L["SIZE_TOOLTIP"] = "점감 아이콘의 크기."
+L["SHOW_TEXT"] = "아이콘 아래 다음 지속 시간"
+L["SHOW_TEXT_TOOLTIP"] = "50%: 다음은 절반 지속. 25%: 4분의 1. 0%: 면역. 테두리도 같은 색입니다."
+L["PREVIEW"] = "미리 보기"
+L["PREVIEW_TOOLTIP"] = "20초 동안 예시 아이콘을 표시합니다."
+L["ABOUT_DESC"] = "WoW Forever용, 대상·주시 대상·나에게 걸리는 군중 제어의 점감(DR). Forever는 애드온에 전투 기록을 숨기므로, 점감은 나와 파티의 시전 및 게임이 보여주는 효과로 셉니다. 설정은 일반에 있습니다."
+L["CMD_UNLOCK"] = "아이콘 잠금을 풀어 끌 수 있게 합니다."
+L["CMD_LOCK"] = "아이콘을 제자리에 고정합니다."
+L["CMD_TEST"] = "20초 동안 예시 아이콘을 표시합니다."
+L["CMD_CLEAR"] = "추적 중인 모든 점감을 잊습니다."
+L["OPTIONS_TITLE"] = "DR Tracker Forever 설정"

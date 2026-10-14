@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- ITALIANO (itIT)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "itIT" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Generale"
+L["DRAG_HINT"] = "Trascina per spostare"
+L["LOCK"] = "Blocca posizione"
+L["VERSION"] = "Versione:"
+L["AUTHOR"] = "Autore:"
+L["LINKS"] = "Collegamenti"
+L["COMMANDS"] = "Comandi"
+L["SELECT"] = "Seleziona"
+L["SELECT_TOOLTIP"] = "Seleziona l'intero link così puoi copiarlo con Ctrl+C. WoW non permette agli addon di scrivere negli appunti, quindi l'ultimo passo spetta a te."
+L["CMD_OPEN"] = "Apre le impostazioni."
+L["DEFAULTS"] = "Valori predefiniti"
+L["UNLOCKED"] = "Icone sbloccate: trascinale, poi scrivi /drf lock."
+L["LOCKED"] = "Icone bloccate."
+L["CLEARED"] = "DR monitorati cancellati."
+L["SHOW_HEADER"] = "Mostra i DR su"
+L["SHOW_TARGET"] = "Il tuo bersaglio"
+L["SHOW_TARGET_TOOLTIP"] = "Icone sopra il riquadro del bersaglio. Il testo e il bordo indicano quanto dura il prossimo controllo di quel tipo: 50%, 25% o 0% (immune). La spirale indica quando si azzera."
+L["SHOW_FOCUS"] = "Il tuo focus"
+L["SHOW_FOCUS_TOOLTIP"] = "Le stesse icone sopra il riquadro del focus."
+L["SHOW_PLAYER"] = "Te"
+L["SHOW_PLAYER_TOOLTIP"] = "DR dei controlli subiti, sopra il tuo riquadro giocatore."
+L["TRACK_HEADER"] = "Monitoraggio"
+L["NPCS"] = "Monitora anche i PNG"
+L["NPCS_TOOLTIP"] = "Spento: solo giocatori nemici. Acceso: anche le creature, utile per provare l'addon."
+L["GROUP"] = "Controlli del tuo gruppo"
+L["GROUP_TOOLTIP"] = "Conta anche i controlli che i membri del gruppo usano sul loro bersaglio, non solo i tuoi."
+L["RESET_TIME"] = "Azzeramento DR"
+L["RESET_TIME_TOOLTIP"] = "Secondi dalla fine di un controllo finché il successivo torna a durare per intero."
+L["LOOK_HEADER"] = "Aspetto"
+L["LOCK_TOOLTIP"] = "Sblocca per trascinare le icone di bersaglio, focus e giocatore ovunque sullo schermo."
+L["SIZE"] = "Dimensione icone"
+L["SIZE_TOOLTIP"] = "Dimensione delle icone dei DR."
+L["SHOW_TEXT"] = "Prossima durata sotto l'icona"
+L["SHOW_TEXT_TOOLTIP"] = "50%: il prossimo dura la metà. 25%: un quarto. 0%: immune. Il bordo ha lo stesso colore."
+L["PREVIEW"] = "Anteprima"
+L["PREVIEW_TOOLTIP"] = "Mostra icone di esempio per 20 secondi."
+L["ABOUT_DESC"] = "Rendimenti decrescenti (DR) dei controlli sul tuo bersaglio, sul tuo focus e su di te, per WoW Forever. Forever nasconde il registro di combattimento agli addon, quindi i DR si contano dai lanci tuoi e del tuo gruppo e dagli effetti che il gioco lascia vedere. Le impostazioni sono in Generale."
+L["CMD_UNLOCK"] = "Sblocca le icone per poterle trascinare."
+L["CMD_LOCK"] = "Blocca le icone al loro posto."
+L["CMD_TEST"] = "Mostra icone di esempio per 20 secondi."
+L["CMD_CLEAR"] = "Dimentica tutti i DR monitorati."
+L["OPTIONS_TITLE"] = "Opzioni di DR Tracker Forever"

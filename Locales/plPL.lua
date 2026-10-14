@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- POLSKI (plPL)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "plPL" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Ogólne"
+L["DRAG_HINT"] = "Przeciągnij, aby przesunąć"
+L["LOCK"] = "Zablokuj pozycję"
+L["VERSION"] = "Wersja:"
+L["AUTHOR"] = "Autor:"
+L["LINKS"] = "Linki"
+L["COMMANDS"] = "Polecenia"
+L["SELECT"] = "Zaznacz"
+L["SELECT_TOOLTIP"] = "Zaznacza cały link, abyś mógł go skopiować skrótem Ctrl+C. WoW nie pozwala dodatkom zapisywać do schowka, więc ostatni krok należy do ciebie."
+L["CMD_OPEN"] = "Otwiera ustawienia."
+L["DEFAULTS"] = "Wartości domyślne"
+L["UNLOCKED"] = "Ikony odblokowane: przeciągnij je, a potem wpisz /drf lock."
+L["LOCKED"] = "Ikony zablokowane."
+L["CLEARED"] = "Wyczyszczono śledzone DR."
+L["SHOW_HEADER"] = "Pokazuj DR na"
+L["SHOW_TARGET"] = "Twój cel"
+L["SHOW_TARGET_TOOLTIP"] = "Ikony nad ramką celu. Tekst i obramowanie pokazują, ile potrwa następna kontrola tego typu: 50%, 25% lub 0% (odporność). Spirala pokazuje reset."
+L["SHOW_FOCUS"] = "Twój fokus"
+L["SHOW_FOCUS_TOOLTIP"] = "Te same ikony nad ramką fokusa."
+L["SHOW_PLAYER"] = "Ty"
+L["SHOW_PLAYER_TOOLTIP"] = "DR kontroli użytej na tobie, nad twoją ramką gracza."
+L["TRACK_HEADER"] = "Śledzenie"
+L["NPCS"] = "Śledź też NPC"
+L["NPCS_TOOLTIP"] = "Wył.: tylko wrodzy gracze. Wł.: także stworzenia, przydatne do wypróbowania dodatku."
+L["GROUP"] = "Kontrola twojej drużyny"
+L["GROUP_TOOLTIP"] = "Liczy też kontrolę, której członkowie drużyny używają na swoim celu, nie tylko twoją."
+L["RESET_TIME"] = "Reset DR"
+L["RESET_TIME_TOOLTIP"] = "Sekundy od końca kontroli, aż następna znów potrwa w pełni."
+L["LOOK_HEADER"] = "Wygląd"
+L["LOCK_TOOLTIP"] = "Odblokuj, aby przeciągnąć ikony celu, fokusa i gracza w dowolne miejsce ekranu."
+L["SIZE"] = "Rozmiar ikon"
+L["SIZE_TOOLTIP"] = "Rozmiar ikon DR."
+L["SHOW_TEXT"] = "Następny czas pod ikoną"
+L["SHOW_TEXT_TOOLTIP"] = "50%: następna trwa połowę. 25%: ćwierć. 0%: odporność. Obramowanie ma ten sam kolor."
+L["PREVIEW"] = "Podgląd"
+L["PREVIEW_TOOLTIP"] = "Pokazuje przykładowe ikony przez 20 sekund."
+L["ABOUT_DESC"] = "Malejąca skuteczność (DR) kontroli na twoim celu, fokusie i na tobie, dla WoW Forever. Forever ukrywa przed dodatkami dziennik walki, więc DR liczy się z twoich rzutów i twojej drużyny oraz z efektów, które gra pozwala zobaczyć. Ustawienia są w zakładce Ogólne."
+L["CMD_UNLOCK"] = "Odblokowuje ikony, aby można je było przeciągnąć."
+L["CMD_LOCK"] = "Blokuje ikony w miejscu."
+L["CMD_TEST"] = "Pokazuje przykładowe ikony przez 20 sekund."
+L["CMD_CLEAR"] = "Zapomina wszystkie śledzone DR."
+L["OPTIONS_TITLE"] = "Opcje DR Tracker Forever"

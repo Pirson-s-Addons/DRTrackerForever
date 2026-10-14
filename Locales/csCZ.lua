@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- ČEŠTINA (csCZ)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "csCZ" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Obecné"
+L["DRAG_HINT"] = "Přetáhni pro přesun"
+L["LOCK"] = "Zamknout pozici"
+L["VERSION"] = "Verze:"
+L["AUTHOR"] = "Autor:"
+L["LINKS"] = "Odkazy"
+L["COMMANDS"] = "Příkazy"
+L["SELECT"] = "Vybrat"
+L["SELECT_TOOLTIP"] = "Vybere celý odkaz, abys ho mohl zkopírovat pomocí Ctrl+C. WoW nedovolí doplňkům zapisovat do schránky, takže poslední krok je na tobě."
+L["CMD_OPEN"] = "Otevře nastavení."
+L["DEFAULTS"] = "Výchozí hodnoty"
+L["UNLOCKED"] = "Ikony odemčeny: přetáhni je a pak napiš /drf lock."
+L["LOCKED"] = "Ikony zamčeny."
+L["CLEARED"] = "Sledované DR vymazány."
+L["SHOW_HEADER"] = "Zobrazit DR na"
+L["SHOW_TARGET"] = "Tvůj cíl"
+L["SHOW_TARGET_TOOLTIP"] = "Ikony nad rámečkem cíle. Text a okraj ukazují, jak dlouho potrvá další kontrola tohoto typu: 50 %, 25 % nebo 0 % (imunní). Spirála ukazuje reset."
+L["SHOW_FOCUS"] = "Tvůj fokus"
+L["SHOW_FOCUS_TOOLTIP"] = "Stejné ikony nad rámečkem fokusu."
+L["SHOW_PLAYER"] = "Ty"
+L["SHOW_PLAYER_TOOLTIP"] = "DR kontroly použité na tebe, nad tvým rámečkem hráče."
+L["TRACK_HEADER"] = "Sledování"
+L["NPCS"] = "Sledovat i NPC"
+L["NPCS_TOOLTIP"] = "Vyp.: jen nepřátelští hráči. Zap.: i stvoření, hodí se k vyzkoušení doplňku."
+L["GROUP"] = "Kontrola tvé skupiny"
+L["GROUP_TOOLTIP"] = "Počítá i kontrolu, kterou členové skupiny použijí na svůj cíl, nejen tvou."
+L["RESET_TIME"] = "Reset DR"
+L["RESET_TIME_TOOLTIP"] = "Sekundy od konce kontroly, než další znovu potrvá celou dobu."
+L["LOOK_HEADER"] = "Vzhled"
+L["LOCK_TOOLTIP"] = "Odemkni, abys mohl přetáhnout ikony cíle, fokusu a hráče kamkoli na obrazovku."
+L["SIZE"] = "Velikost ikon"
+L["SIZE_TOOLTIP"] = "Velikost ikon DR."
+L["SHOW_TEXT"] = "Další trvání pod ikonou"
+L["SHOW_TEXT_TOOLTIP"] = "50 %: další trvá polovinu. 25 %: čtvrtinu. 0 %: imunní. Okraj má stejnou barvu."
+L["PREVIEW"] = "Náhled"
+L["PREVIEW_TOOLTIP"] = "Ukáže ukázkové ikony na 20 sekund."
+L["ABOUT_DESC"] = "Klesající účinnost (DR) kontroly na tvém cíli, fokusu a na tobě, pro WoW Forever. Forever skrývá před doplňky bojový záznam, takže DR se počítá z tvých kouzel a kouzel skupiny a z efektů, které hra dovolí vidět. Nastavení je v sekci Obecné."
+L["CMD_UNLOCK"] = "Odemkne ikony, abys je mohl přetáhnout."
+L["CMD_LOCK"] = "Zamkne ikony na místě."
+L["CMD_TEST"] = "Ukáže ukázkové ikony na 20 sekund."
+L["CMD_CLEAR"] = "Zapomene všechna sledovaná DR."
+L["OPTIONS_TITLE"] = "Možnosti DR Tracker Forever"

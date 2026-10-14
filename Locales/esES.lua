@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- ESPAÑOL (esES / esMX)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "esES" and locale ~= "esMX" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "General"
+L["DRAG_HINT"] = "Arrastra para mover"
+L["LOCK"] = "Bloquear posición"
+L["VERSION"] = "Versión:"
+L["AUTHOR"] = "Autor:"
+L["LINKS"] = "Enlaces"
+L["COMMANDS"] = "Comandos"
+L["SELECT"] = "Seleccionar"
+L["SELECT_TOOLTIP"] = "Selecciona el enlace entero para que puedas copiarlo con Ctrl+C. WoW no deja a los addons escribir en el portapapeles, así que el último paso lo das tú."
+L["CMD_OPEN"] = "Abre los ajustes."
+L["DEFAULTS"] = "Valores por defecto"
+L["UNLOCKED"] = "Iconos desbloqueados: arrástralos y luego escribe /drf lock."
+L["LOCKED"] = "Iconos bloqueados."
+L["CLEARED"] = "DR olvidado."
+L["SHOW_HEADER"] = "Mostrar el DR en"
+L["SHOW_TARGET"] = "Tu objetivo"
+L["SHOW_TARGET_TOOLTIP"] = "Iconos encima del marco del objetivo. El texto y el borde dicen cuánto dura el siguiente control de masas de ese tipo: 50%, 25% o 0% (inmune). La espiral, cuándo se reinicia."
+L["SHOW_FOCUS"] = "Tu foco"
+L["SHOW_FOCUS_TOOLTIP"] = "Los mismos iconos encima del marco del foco."
+L["SHOW_PLAYER"] = "Tú"
+L["SHOW_PLAYER_TOOLTIP"] = "DR de los controles de masas que te lanzan, encima de tu marco de jugador."
+L["TRACK_HEADER"] = "Seguimiento"
+L["NPCS"] = "Seguir también a PNJ"
+L["NPCS_TOOLTIP"] = "Apagado: solo jugadores enemigos. Encendido: también criaturas, útil para probar el addon."
+L["GROUP"] = "Controles de tu grupo"
+L["GROUP_TOOLTIP"] = "Cuenta también los controles de masas que lanzan los miembros de tu grupo a su objetivo, no solo los tuyos."
+L["RESET_TIME"] = "Reinicio del DR"
+L["RESET_TIME_TOOLTIP"] = "Segundos desde que acaba un control de masas hasta que el siguiente vuelve a durar entero."
+L["LOOK_HEADER"] = "Aspecto"
+L["LOCK_TOOLTIP"] = "Desbloquéalo para arrastrar los iconos del objetivo, del foco y los tuyos a cualquier parte de la pantalla."
+L["SIZE"] = "Tamaño de los iconos"
+L["SIZE_TOOLTIP"] = "Tamaño de los iconos de DR."
+L["SHOW_TEXT"] = "Siguiente duración bajo el icono"
+L["SHOW_TEXT_TOOLTIP"] = "50%: el siguiente dura la mitad. 25%: un cuarto. 0%: inmune. El borde lleva el mismo color."
+L["PREVIEW"] = "Vista previa"
+L["PREVIEW_TOOLTIP"] = "Muestra iconos de ejemplo durante 20 segundos."
+L["ABOUT_DESC"] = "Rendimientos decrecientes (DR) de los controles de masas en tu objetivo, tu foco y en ti, para WoW Forever. Forever oculta el registro de combate a los addons, así que el DR se cuenta con tus lanzamientos y los de tu grupo y con los efectos que el juego deja ver. Los ajustes están en General."
+L["CMD_UNLOCK"] = "Desbloquea los iconos para poder arrastrarlos."
+L["CMD_LOCK"] = "Bloquea los iconos en su sitio."
+L["CMD_TEST"] = "Muestra iconos de ejemplo durante 20 segundos."
+L["CMD_CLEAR"] = "Olvida todo el DR seguido."
+L["OPTIONS_TITLE"] = "Opciones de DR Tracker Forever"

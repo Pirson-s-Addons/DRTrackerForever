@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- NORSK (noNO)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "noNO" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Generelt"
+L["DRAG_HINT"] = "Dra for å flytte"
+L["LOCK"] = "Lås posisjon"
+L["VERSION"] = "Versjon:"
+L["AUTHOR"] = "Forfatter:"
+L["LINKS"] = "Lenker"
+L["COMMANDS"] = "Kommandoer"
+L["SELECT"] = "Merk"
+L["SELECT_TOOLTIP"] = "Merker hele lenken slik at du kan kopiere den med Ctrl+C. WoW lar ikke tillegg skrive til utklippstavlen, så det siste steget tar du selv."
+L["CMD_OPEN"] = "Åpner innstillingene."
+L["DEFAULTS"] = "Standardverdier"
+L["UNLOCKED"] = "Ikoner låst opp: dra dem, og skriv så /drf lock."
+L["LOCKED"] = "Ikoner låst."
+L["CLEARED"] = "Sporet DR tømt."
+L["SHOW_HEADER"] = "Vis DR på"
+L["SHOW_TARGET"] = "Målet ditt"
+L["SHOW_TARGET_TOOLTIP"] = "Ikoner over målrammen. Teksten og kanten viser hvor lenge neste kontrolleffekt av den typen varer: 50%, 25% eller 0% (immun). Spiralen viser når den nullstilles."
+L["SHOW_FOCUS"] = "Fokuset ditt"
+L["SHOW_FOCUS_TOOLTIP"] = "De samme ikonene over fokusrammen."
+L["SHOW_PLAYER"] = "Deg"
+L["SHOW_PLAYER_TOOLTIP"] = "DR for kontrolleffekter på deg, over spillerrammen din."
+L["TRACK_HEADER"] = "Sporing"
+L["NPCS"] = "Spor også NPC-er"
+L["NPCS_TOOLTIP"] = "Av: bare fiendtlige spillere. På: også skapninger, nyttig for å prøve tillegget."
+L["GROUP"] = "Kontrolleffekter fra gruppen"
+L["GROUP_TOOLTIP"] = "Teller også kontrolleffektene gruppemedlemmene bruker på målet sitt, ikke bare dine."
+L["RESET_TIME"] = "DR-nullstilling"
+L["RESET_TIME_TOOLTIP"] = "Sekunder etter at en kontrolleffekt slutter til den neste varer fullt igjen."
+L["LOOK_HEADER"] = "Utseende"
+L["LOCK_TOOLTIP"] = "Lås opp for å dra mål-, fokus- og spillerikonene hvor som helst på skjermen."
+L["SIZE"] = "Ikonstørrelse"
+L["SIZE_TOOLTIP"] = "Størrelsen på DR-ikonene."
+L["SHOW_TEXT"] = "Neste varighet under ikonet"
+L["SHOW_TEXT_TOOLTIP"] = "50%: neste varer halvparten. 25%: en fjerdedel. 0%: immun. Kanten har samme farge."
+L["PREVIEW"] = "Forhåndsvisning"
+L["PREVIEW_TOOLTIP"] = "Viser eksempelikoner i 20 sekunder."
+L["ABOUT_DESC"] = "Avtagende effekt (DR) av kontrolleffekter på målet ditt, fokuset ditt og deg, for WoW Forever. Forever skjuler kamploggen for tillegg, så DR telles fra dine og gruppens besvergelser og fra effektene spillet lar tillegg se. Innstillingene er under Generelt."
+L["CMD_UNLOCK"] = "Låser opp ikonene så du kan dra dem."
+L["CMD_LOCK"] = "Låser ikonene på plass."
+L["CMD_TEST"] = "Viser eksempelikoner i 20 sekunder."
+L["CMD_CLEAR"] = "Glemmer all sporet DR."
+L["OPTIONS_TITLE"] = "Innstillinger for DR Tracker Forever"

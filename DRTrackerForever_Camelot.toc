@@ -1,0 +1,129 @@
+## Interface: 16001
+## Version: 1.00
+## Author: Pirson
+## IconTexture: Interface\AddOns\DRTrackerForever\img\logo_drf
+## Title: |cffd597ffDR Tracker Forever|r
+
+# https://warcraft.wiki.gg/wiki/Addon_Categories
+## Category: PvP
+## Category-deDE: PvP
+## Category-esES: JcJ
+## Category-esMX: JcJ
+## Category-frFR: JcJ
+## Category-itIT: PvP
+## Category-koKR: PvP
+## Category-ptBR: JxJ
+## Category-ruRU: PvP
+## Category-zhCN: PvP
+## Category-zhTW: PvP
+## Category-plPL: PvP
+## Category-svSE: PvP
+## Category-noNO: PvP
+## Category-csCZ: PvP
+## Category-nlNL: PvP
+## Category-roRO: PvP
+## Category-huHU: PvP
+## Category-elGR: PvP
+## Category-ukUA: PvP
+## Category-daDK: PvP
+## Category-fiFI: PvP
+## Category-skSK: PvP
+## Category-bgBG: PvP
+## Category-hrHR: PvP
+## Category-srRS: PvP
+## Category-slSI: PvP
+## Category-ltLT: PvP
+## Category-lvLV: PvP
+## Category-etEE: PvP
+## Category-idID: PvP
+## Category-msMY: PvP
+## Category-faIR: PvP
+## Category-heIL: PvP
+## Category-bnBD: PvP
+## Category-urPK: PvP
+## Category-taIN: PvP
+## Category-teIN: PvP
+## Category-trTR: PvP
+## Category-jaJP: PvP
+## Category-arSA: PvP
+## Category-hiIN: PvP
+## Category-thTH: PvP
+## Category-viVN: PvP
+
+## Notes: |cFF33CCFFDiminishing returns (DR) of crowd control on your target, your focus and you, for WoW Forever.|r
+## Notes-deDE: |cFF33CCFFAbnehmende Wirkung (DR) von Kontrolleffekten auf deinem Ziel, deinem Fokus und dir, für WoW Forever.|r
+## Notes-esES: |cFF33CCFFRendimientos decrecientes (DR) de los controles de masas en tu objetivo, tu foco y en ti, para WoW Forever.|r
+## Notes-esMX: |cFF33CCFFRendimientos decrecientes (DR) de los controles de masas en tu objetivo, tu foco y en ti, para WoW Forever.|r
+## Notes-frFR: |cFF33CCFFRendements décroissants (DR) des contrôles sur votre cible, votre focalisation et vous, pour WoW Forever.|r
+## Notes-itIT: |cFF33CCFFRendimenti decrescenti (DR) dei controlli sul tuo bersaglio, sul tuo focus e su di te, per WoW Forever.|r
+## Notes-koKR: |cFF33CCFFWoW Forever용, 대상·주시 대상·나에게 걸리는 군중 제어의 점감(DR).|r
+## Notes-ptBR: |cFF33CCFFRetornos decrescentes (DR) dos controles no seu alvo, no seu foco e em você, para WoW Forever.|r
+## Notes-ruRU: |cFF33CCFFУбывающая эффективность (DR) контроля на вашей цели, фокусе и на вас, для WoW Forever.|r
+## Notes-zhCN: |cFF33CCFF适用于 WoW Forever：你的目标、焦点和你自己身上的控制递减（DR）。|r
+## Notes-zhTW: |cFF33CCFF適用於 WoW Forever：你的目標、專注目標和你自己身上的控場遞減（DR）。|r
+## Notes-plPL: |cFF33CCFFMalejąca skuteczność (DR) kontroli na twoim celu, fokusie i na tobie, dla WoW Forever.|r
+## Notes-svSE: |cFF33CCFFAvtagande effekt (DR) av kontrolleffekter på ditt mål, ditt fokus och dig, för WoW Forever.|r
+## Notes-noNO: |cFF33CCFFAvtagende effekt (DR) av kontrolleffekter på målet ditt, fokuset ditt og deg, for WoW Forever.|r
+## Notes-csCZ: |cFF33CCFFKlesající účinnost (DR) kontroly na tvém cíli, fokusu a na tobě, pro WoW Forever.|r
+## Notes-nlNL: |cFF33CCFFAfnemende werking (DR) van crowd control op je doelwit, je focus en jezelf, voor WoW Forever.|r
+## Notes-roRO: |cFF33CCFFRandament descrescător (DR) al controlului asupra țintei, focusului și asupra ta, pentru WoW Forever.|r
+## Notes-huHU: |cFF33CCFFCsökkenő hatás (DR) az irányításvesztésre a célpontodon, a fókuszodon és rajtad, a WoW Foreverhez.|r
+## Notes-elGR: |cFF33CCFFΦθίνουσα απόδοση (DR) του ελέγχου στον στόχο σου, στην εστίασή σου και σε σένα, για το WoW Forever.|r
+## Notes-ukUA: |cFF33CCFFСпадна ефективність (DR) контролю на вашій цілі, фокусі та на вас, для WoW Forever.|r
+## Notes-daDK: |cFF33CCFFAftagende effekt (DR) af kontroleffekter på dit mål, dit fokus og dig, til WoW Forever.|r
+## Notes-fiFI: |cFF33CCFFHeikkenevä teho (DR) hallintavaikutuksille kohteessasi, fokuksessasi ja sinussa, WoW Foreveriin.|r
+## Notes-skSK: |cFF33CCFFKlesajúca účinnosť (DR) kontroly na tvojom cieli, fokuse a na tebe, pre WoW Forever.|r
+## Notes-bgBG: |cFF33CCFFНамаляващ ефект (DR) на контрола върху целта, фокуса и върху теб, за WoW Forever.|r
+## Notes-hrHR: |cFF33CCFFOpadajući učinak (DR) kontrole na tvojoj meti, fokusu i na tebi, za WoW Forever.|r
+## Notes-srRS: |cFF33CCFFOpadajući efekat (DR) kontrole na tvojoj meti, fokusu i na tebi, za WoW Forever.|r
+## Notes-slSI: |cFF33CCFFPadajoči učinek (DR) nadzora na tvoji tarči, fokusu in na tebi, za WoW Forever.|r
+## Notes-ltLT: |cFF33CCFFMažėjantis poveikis (DR) kontrolei tavo taikiniui, fokusui ir tau, skirta WoW Forever.|r
+## Notes-lvLV: |cFF33CCFFSamazinošā iedarbība (DR) kontrolei uz tavu mērķi, fokusu un tevi, priekš WoW Forever.|r
+## Notes-etEE: |cFF33CCFFKahanev mõju (DR) kontrollile sinu sihtmärgil, fookusel ja sinul, WoW Foreveri jaoks.|r
+## Notes-idID: |cFF33CCFFEfek berkurang (DR) dari crowd control pada targetmu, fokusmu, dan dirimu, untuk WoW Forever.|r
+## Notes-msMY: |cFF33CCFFKesan berkurangan (DR) kawalan kumpulan pada sasaran, fokus dan diri anda, untuk WoW Forever.|r
+## Notes-faIR: |cFF33CCFFبازده کاهشی (DR) کنترل روی هدف، فوکوس و خودت، برای WoW Forever.|r
+## Notes-heIL: |cFF33CCFFתשואה פוחתת (DR) של שליטה על המטרה, הפוקוס ועליך, עבור WoW Forever.|r
+## Notes-bnBD: |cFF33CCFFWoW Forever-এর জন্য আপনার লক্ষ্য, ফোকাস ও আপনার উপর ক্রাউড কন্ট্রোলের ক্রমহ্রাসমান প্রভাব (DR)।|r
+## Notes-urPK: |cFF33CCFFWoW Forever کے لیے آپ کے ہدف، فوکس اور آپ پر کراؤڈ کنٹرول کا گھٹتا اثر (DR)۔|r
+## Notes-taIN: |cFF33CCFFWoW Forever-க்கான உங்கள் இலக்கு, ஃபோகஸ் மற்றும் உங்கள் மீதான கூட்டக் கட்டுப்பாட்டின் குறையும் விளைவு (DR).|r
+## Notes-teIN: |cFF33CCFFWoW Forever కోసం మీ లక్ష్యం, ఫోకస్ మరియు మీపై క్రౌడ్ కంట్రోల్ తగ్గే ప్రభావం (DR).|r
+## Notes-trTR: |cFF33CCFFWoW Forever için hedefin, odağın ve senin üzerindeki kitle kontrolünün azalan getirileri (DR).|r
+## Notes-jaJP: |cFF33CCFFWoW Forever用。ターゲット、フォーカス、自分にかかる行動妨害の効果逓減（DR）。|r
+## Notes-arSA: |cFF33CCFFتناقص فعالية (DR) التحكم على هدفك وتركيزك وعليك، لـ WoW Forever.|r
+## Notes-hiIN: |cFF33CCFFWoW Forever के लिए आपके लक्ष्य, फ़ोकस और आप पर क्राउड कंट्रोल के घटते प्रभाव (DR)।|r
+## Notes-thTH: |cFF33CCFFผลลดลง (DR) ของการควบคุมบนเป้าหมาย โฟกัส และตัวคุณ สำหรับ WoW Forever|r
+## Notes-viVN: |cFF33CCFFHiệu quả giảm dần (DR) của khống chế trên mục tiêu, mục tiêu tập trung và bạn, cho WoW Forever.|r
+
+## SavedVariables: DRTrackerForeverDB
+
+# Solo WoW Forever: el sufijo _Camelot es el game type que busca ese cliente, y
+# sin un .toc generico ningun otro cliente lista el addon.
+
+Locales/enUS.lua
+Locales/esES.lua
+Locales/deDE.lua
+Locales/frFR.lua
+Locales/itIT.lua
+Locales/ptBR.lua
+Locales/ruRU.lua
+Locales/koKR.lua
+Locales/zhCN.lua
+Locales/zhTW.lua
+Locales/plPL.lua
+Locales/svSE.lua
+Locales/noNO.lua
+Locales/trTR.lua
+Locales/jaJP.lua
+Locales/arSA.lua
+Locales/hiIN.lua
+Locales/thTH.lua
+Locales/viVN.lua
+Locales/csCZ.lua
+Data/Spells.lua
+Core/Tracker.lua
+Core/Sources.lua
+UI/Display.lua
+UI/About.lua
+UI/Options.lua
+Core/Core.lua

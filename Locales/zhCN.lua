@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- 简体中文 (zhCN)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "zhCN" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "常规"
+L["DRAG_HINT"] = "拖动以移动"
+L["LOCK"] = "锁定位置"
+L["VERSION"] = "版本："
+L["AUTHOR"] = "作者："
+L["LINKS"] = "链接"
+L["COMMANDS"] = "命令"
+L["SELECT"] = "选择"
+L["SELECT_TOOLTIP"] = "选中整个链接，以便你用 Ctrl+C 复制。WoW 不允许插件写入剪贴板，所以最后一步需要你自己完成。"
+L["CMD_OPEN"] = "打开设置。"
+L["DEFAULTS"] = "默认值"
+L["UNLOCKED"] = "图标已解锁：拖动它们，然后输入 /drf lock。"
+L["LOCKED"] = "图标已锁定。"
+L["CLEARED"] = "已清除追踪的递减。"
+L["SHOW_HEADER"] = "显示递减于"
+L["SHOW_TARGET"] = "你的目标"
+L["SHOW_TARGET_TOOLTIP"] = "目标框体上方的图标。文字和边框显示该类下一个控制的持续时间：50%、25% 或 0%（免疫）。旋转阴影显示何时重置。"
+L["SHOW_FOCUS"] = "你的焦点"
+L["SHOW_FOCUS_TOOLTIP"] = "焦点框体上方的相同图标。"
+L["SHOW_PLAYER"] = "你自己"
+L["SHOW_PLAYER_TOOLTIP"] = "你身上所受控制的递减，显示在玩家框体上方。"
+L["TRACK_HEADER"] = "追踪"
+L["NPCS"] = "同时追踪NPC"
+L["NPCS_TOOLTIP"] = "关闭：只追踪敌方玩家。开启：也包括生物，便于测试插件。"
+L["GROUP"] = "队伍的控制"
+L["GROUP_TOOLTIP"] = "也统计队友对其目标施放的控制，而不仅是你的。"
+L["RESET_TIME"] = "递减重置"
+L["RESET_TIME_TOOLTIP"] = "控制结束后，下一个控制恢复完整持续时间所需的秒数。"
+L["LOOK_HEADER"] = "外观"
+L["LOCK_TOOLTIP"] = "解锁后可将目标、焦点和玩家图标拖到屏幕任意位置。"
+L["SIZE"] = "图标大小"
+L["SIZE_TOOLTIP"] = "递减图标的大小。"
+L["SHOW_TEXT"] = "图标下方显示下次持续时间"
+L["SHOW_TEXT_TOOLTIP"] = "50%：下一个持续一半。25%：四分之一。0%：免疫。边框颜色相同。"
+L["PREVIEW"] = "预览"
+L["PREVIEW_TOOLTIP"] = "显示示例图标 20 秒。"
+L["ABOUT_DESC"] = "适用于 WoW Forever 的控制递减（DR），显示在你的目标、焦点和你自己身上。Forever 对插件隐藏战斗记录，因此递减根据你和队伍的施法以及游戏允许插件看到的效果来计算。设置在“常规”中。"
+L["CMD_UNLOCK"] = "解锁图标以便拖动。"
+L["CMD_LOCK"] = "将图标锁定在原位。"
+L["CMD_TEST"] = "显示示例图标 20 秒。"
+L["CMD_CLEAR"] = "忘记所有追踪的递减。"
+L["OPTIONS_TITLE"] = "DR Tracker Forever 选项"

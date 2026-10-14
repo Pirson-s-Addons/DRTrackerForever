@@ -1,0 +1,51 @@
+local ADDON_NAME, ns = ...
+
+-- ==========================================
+-- TÜRKÇE (trTR)
+-- ==========================================
+local locale = GetLocale()
+if locale ~= "trTR" then return end
+local L = ns.L
+
+L["GENERAL_HEADER"] = "Genel"
+L["DRAG_HINT"] = "Taşımak için sürükle"
+L["LOCK"] = "Konumu kilitle"
+L["VERSION"] = "Sürüm:"
+L["AUTHOR"] = "Yazar:"
+L["LINKS"] = "Bağlantılar"
+L["COMMANDS"] = "Komutlar"
+L["SELECT"] = "Seç"
+L["SELECT_TOOLTIP"] = "Ctrl+C ile kopyalayabilmen için bağlantının tamamını seçer. WoW eklentilerin panoya yazmasına izin vermez, bu yüzden son adım sana kalıyor."
+L["CMD_OPEN"] = "Ayarları açar."
+L["DEFAULTS"] = "Varsayılan değerler"
+L["UNLOCKED"] = "Simgelerin kilidi açıldı: sürükleyin, sonra /drf lock yazın."
+L["LOCKED"] = "Simgeler kilitlendi."
+L["CLEARED"] = "İzlenen DR temizlendi."
+L["SHOW_HEADER"] = "DR gösterilecek yer"
+L["SHOW_TARGET"] = "Hedefin"
+L["SHOW_TARGET_TOOLTIP"] = "Hedef çerçevesinin üstünde simgeler. Yazı ve kenarlık, o türden bir sonraki kitle kontrolünün ne kadar süreceğini gösterir: %50, %25 veya %0 (bağışık). Spiral sıfırlanma zamanını gösterir."
+L["SHOW_FOCUS"] = "Odağın"
+L["SHOW_FOCUS_TOOLTIP"] = "Odak çerçevesinin üstünde aynı simgeler."
+L["SHOW_PLAYER"] = "Sen"
+L["SHOW_PLAYER_TOOLTIP"] = "Sana uygulanan kitle kontrolünün DR'si, oyuncu çerçevenin üstünde."
+L["TRACK_HEADER"] = "İzleme"
+L["NPCS"] = "NPC'leri de izle"
+L["NPCS_TOOLTIP"] = "Kapalı: yalnızca düşman oyuncular. Açık: yaratıklar da, eklentiyi denemek için kullanışlı."
+L["GROUP"] = "Grubunun kitle kontrolleri"
+L["GROUP_TOOLTIP"] = "Yalnızca seninkileri değil, grup üyelerinin hedeflerine uyguladığı kitle kontrollerini de sayar."
+L["RESET_TIME"] = "DR sıfırlama"
+L["RESET_TIME_TOOLTIP"] = "Bir kitle kontrolü bittikten sonra bir sonrakinin yeniden tam süreceği saniye."
+L["LOOK_HEADER"] = "Görünüm"
+L["LOCK_TOOLTIP"] = "Hedef, odak ve oyuncu simgelerini ekranda istediğin yere sürüklemek için kilidi aç."
+L["SIZE"] = "Simge boyutu"
+L["SIZE_TOOLTIP"] = "DR simgelerinin boyutu."
+L["SHOW_TEXT"] = "Simgenin altında sonraki süre"
+L["SHOW_TEXT_TOOLTIP"] = "%50: sonraki yarısı kadar sürer. %25: dörtte biri. %0: bağışık. Kenarlık aynı renktedir."
+L["PREVIEW"] = "Önizleme"
+L["PREVIEW_TOOLTIP"] = "20 saniye boyunca örnek simgeler gösterir."
+L["ABOUT_DESC"] = "WoW Forever için hedefin, odağın ve senin üzerindeki kitle kontrolünün azalan getirileri (DR). Forever savaş kaydını eklentilerden gizler, bu yüzden DR senin ve grubunun büyülerinden ve oyunun gösterdiği etkilerden sayılır. Ayarlar Genel bölümündedir."
+L["CMD_UNLOCK"] = "Simgelerin kilidini açar, böylece sürükleyebilirsin."
+L["CMD_LOCK"] = "Simgeleri yerine kilitler."
+L["CMD_TEST"] = "20 saniye boyunca örnek simgeler gösterir."
+L["CMD_CLEAR"] = "İzlenen tüm DR'yi unutur."
+L["OPTIONS_TITLE"] = "DR Tracker Forever Seçenekleri"
