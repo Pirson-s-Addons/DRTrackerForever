@@ -8,7 +8,7 @@ local L = ns.L
 local DEFAULTS = {
     showTarget = true, showFocus = true, showPlayer = true,
     npcs = false, group = true, resetTime = 18,
-    locked = true, size = 30, showText = true,
+    locked = true, size = 30, showText = true, grow = "RIGHT",
 }
 ns.DEFAULTS = DEFAULTS
 

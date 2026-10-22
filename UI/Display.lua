@@ -11,18 +11,28 @@ local L = ns.L
 
 local MAX_ICONS = #ns.CATEGORIES
 local GAP = 4
+local TEXT_GAP = 14 -- en vertical, sitio para el texto de debajo del icono
+-- Direccion de crecimiento: punto del primer icono y sentido de los siguientes
+local GROW = {
+    RIGHT = { "LEFT", 1, 0 },
+    LEFT = { "RIGHT", -1, 0 },
+    DOWN = { "TOP", 0, -1 },
+    UP = { "BOTTOM", 0, 1 },
+}
+ns.GROW_ORDER = { "RIGHT", "LEFT", "UP", "DOWN" }
 local BARS = {
     { unit = "target", option = "showTarget", frame = "TargetFrame", label = "SHOW_TARGET" },
     { unit = "focus", option = "showFocus", frame = "FocusFrame", label = "SHOW_FOCUS" },
     { unit = "player", option = "showPlayer", frame = "PlayerFrame", label = "SHOW_PLAYER" },
 }
+ns.BARS = BARS
 -- Por controles que lleva: texto y color del borde
 local STAGES = {
     { "50%", 0.25, 1, 0.25 },
     { "25%", 1, 0.6, 0 },
     { "0%", 1, 0.15, 0.15 },
 }
-local bars = {}
+local bars, barsByUnit = {}, {}
 
 local function CreateIcon(bar)
     local icon = CreateFrame("Frame", nil, bar)
@@ -69,6 +79,7 @@ local function CreateBar(info)
     bar:SetScript("OnDragStop", function(self)
         self:StopMovingOrSizing()
         SavePosition(self)
+        if ns.RefreshOptions then ns.RefreshOptions() end
     end)
     bar.background = bar:CreateTexture(nil, "BACKGROUND")
     bar.background:SetAllPoints()
@@ -94,6 +105,9 @@ local function UpdateBar(bar, now)
     local list
     if ns.previewUntil and now < ns.previewUntil then
         list = ns.PreviewStates(ns.previewStart)
+    elseif not ns.db.locked then
+        -- Desbloqueado: la muestra, para ver donde queda y hacia donde crece
+        list = ns.PreviewStates(ns.editStart)
     elseif ns.db[bar.option] then
         local key = ns.UnitKey(bar.unit)
         list = key and ns.tracker:States(key, now)
@@ -123,18 +137,24 @@ end
 function ns.Refresh()
     if not ns.tracker then return end
     local now = GetTime()
+    -- La muestra de edicion vuelve a empezar cuando acaban sus espirales
+    if not ns.editStart or now - ns.editStart >= 18 then ns.editStart = now end
     for _, bar in ipairs(bars) do UpdateBar(bar, now) end
 end
 
 -- Tamano, posicion y si se ve cada fila (al cambiar una opcion)
 function ns.ApplyDisplay()
     local size = ns.db.size
+    local grow = GROW[ns.db.grow] or GROW.RIGHT
+    local point, dx, dy = grow[1], grow[2], grow[3]
+    local step = size + (dy == 0 and GAP or GAP + TEXT_GAP)
+    local length = MAX_ICONS * step - (step - size)
     for _, bar in ipairs(bars) do
-        bar:SetSize(MAX_ICONS * (size + GAP) - GAP, size)
+        if dy == 0 then bar:SetSize(length, size) else bar:SetSize(size, length) end
         for i, icon in ipairs(bar.icons) do
             icon:SetSize(size, size)
             icon:ClearAllPoints()
-            icon:SetPoint("LEFT", bar, "LEFT", (i - 1) * (size + GAP), 0)
+            icon:SetPoint(point, bar, point, (i - 1) * step * dx, (i - 1) * step * dy)
         end
         local unlocked = not ns.db.locked
         bar:EnableMouse(unlocked)
@@ -153,13 +173,30 @@ function ns.Preview(seconds)
     C_Timer.After(seconds + 0.1, ns.Refresh)
 end
 
+-- Centro de la fila respecto al centro de la pantalla (deslizadores X/Y)
+function ns.GetBarOffset(unit)
+    local x, y = barsByUnit[unit]:GetCenter()
+    if not x then return 0, 0 end -- ponytail: fila sin colocar aun, sale en 0
+    local cx, cy = UIParent:GetCenter()
+    return math.floor(x - cx + 0.5), math.floor(y - cy + 0.5)
+end
+
+function ns.SetBarOffset(unit, x, y)
+    local ox, oy = ns.GetBarOffset(unit)
+    ns.db.pos[unit] = { "CENTER", "CENTER", x or ox, y or oy }
+    Place(barsByUnit[unit])
+end
+
 function ns.ResetPositions()
     ns.db.pos = {}
     ns.ApplyDisplay()
 end
 
 function ns.CreateDisplay()
-    for _, info in ipairs(BARS) do bars[#bars + 1] = CreateBar(info) end
+    for _, info in ipairs(BARS) do
+        bars[#bars + 1] = CreateBar(info)
+        barsByUnit[info.unit] = bars[#bars]
+    end
     ns.ApplyDisplay()
     -- Quita los iconos al reiniciarse el DR (y ve cambios de objetivo del grupo)
     C_Timer.NewTicker(0.25, ns.Refresh)

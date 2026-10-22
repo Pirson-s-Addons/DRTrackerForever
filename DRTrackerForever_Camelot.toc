@@ -1,5 +1,5 @@
 ## Interface: 16001
-## Version: 1.00
+## Version: 1.01
 ## Author: Pirson
 ## IconTexture: Interface\AddOns\DRTrackerForever\img\logo_drf
 ## Title: |cffd597ffDR Tracker Forever|r
