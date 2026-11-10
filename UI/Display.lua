@@ -56,17 +56,80 @@ local function SavePosition(bar)
     ns.db.pos[bar.unit] = { point, relative, x, y }
 end
 
+-- Puntos del marco a los que se puede pegar la fila (los puntos de Posicion)
+-- y el punto de la fila que va pegado a cada uno, para que quede por fuera
+ns.ANCHOR_POINTS = { "TOPLEFT", "TOP", "TOPRIGHT", "LEFT", "RIGHT", "BOTTOMLEFT", "BOTTOM", "BOTTOMRIGHT" }
+local OUTSIDE = {
+    TOPLEFT = { "BOTTOMLEFT", 0, 4 }, TOP = { "BOTTOM", 0, 4 }, TOPRIGHT = { "BOTTOMRIGHT", 0, 4 },
+    LEFT = { "RIGHT", -4, 0 }, RIGHT = { "LEFT", 4, 0 },
+    BOTTOMLEFT = { "TOPLEFT", 0, -4 }, BOTTOM = { "TOP", 0, -4 }, BOTTOMRIGHT = { "TOPRIGHT", 0, -4 },
+}
+ns.OUTSIDE = OUTSIDE
+
+-- Los 8 puntos sobre un marco (la muestra de Posicion y el marco de verdad);
+-- devuelve la funcion que marca el punto actual de la fila
+function ns.CreateAnchorDots(parent, getUnit)
+    local dots = {}
+    for _, at in ipairs(ns.ANCHOR_POINTS) do
+        local dot = CreateFrame("CheckButton", nil, parent, "UIRadioButtonTemplate")
+        dot:SetPoint("CENTER", parent, at)
+        dot:SetScript("OnClick", function()
+            ns.SetBarAnchor(getUnit(), at)
+            if ns.RefreshOptions then ns.RefreshOptions() end
+        end)
+        dot:SetScript("OnEnter", function(self)
+            GameTooltip:SetOwner(self, "ANCHOR_RIGHT")
+            GameTooltip:SetText(L.POS_ANCHOR_TOOLTIP, nil, nil, nil, nil, true)
+            GameTooltip:Show()
+        end)
+        dot:SetScript("OnLeave", function() GameTooltip:Hide() end)
+        dots[at] = dot
+    end
+    return function()
+        local current = ns.GetBarAnchor(getUnit())
+        for at, dot in pairs(dots) do dot:SetChecked(at == current) end
+    end
+end
+
+-- Con Posicion abierta: puntos encima del marco de verdad de la fila elegida
+local overlay, refreshOverlay
+local function UpdateOverlay()
+    if not overlay then return end
+    local anchor = ns.editing and _G[barsByUnit[ns.editing].anchorName]
+    overlay:SetShown(anchor ~= nil)
+    if not anchor then return end
+    overlay:ClearAllPoints()
+    overlay:SetAllPoints(anchor)
+    refreshOverlay()
+end
+
+-- Largo de la fila para n iconos
+local function Fit(bar, n)
+    local length = n * bar.step - (bar.step - bar.size)
+    if bar.vertical then bar:SetSize(bar.size, length) else bar:SetSize(length, bar.size) end
+end
+
 local function Place(bar)
     bar:ClearAllPoints()
     local pos = ns.db.pos[bar.unit]
     local anchor = _G[bar.anchorName]
-    if pos then
+    -- Pegada a su marco, la fila mide lo que sus iconos: asi el grupo queda
+    -- alineado con el punto (centrado, a la derecha...). Suelta, mide siempre igual
+    bar.fit = anchor and (not pos or pos.at) and true or false
+    if not bar.fit then Fit(bar, MAX_ICONS) end
+    -- Encima del marco, sitio para el texto de debajo de los iconos
+    local textRoom = ns.db.showText and TEXT_GAP or 0
+    if pos and pos.at and anchor then
+        local o = OUTSIDE[pos.at]
+        bar:SetPoint(o[1], anchor, pos.at, o[2], o[3] + (o[3] > 0 and textRoom or 0))
+    elseif pos and not pos.at then
         bar:SetPoint(pos[1], UIParent, pos[2], pos[3], pos[4])
     elseif anchor then
-        bar:SetPoint("BOTTOMLEFT", anchor, "TOPLEFT", 20, 4)
+        bar:SetPoint("BOTTOMLEFT", anchor, "TOPLEFT", 20, 4 + textRoom)
     else
         bar:SetPoint("CENTER", UIParent, "CENTER", 0, -150)
     end
+    UpdateOverlay()
 end
 
 local function CreateBar(info)
@@ -105,7 +168,7 @@ local function UpdateBar(bar, now)
     local list
     if ns.previewUntil and now < ns.previewUntil then
         list = ns.PreviewStates(ns.previewStart)
-    elseif not ns.db.locked then
+    elseif not ns.db.locked or ns.editing == bar.unit then
         -- Desbloqueado: la muestra, para ver donde queda y hacia donde crece
         list = ns.PreviewStates(ns.editStart)
     elseif ns.db[bar.option] then
@@ -113,6 +176,7 @@ local function UpdateBar(bar, now)
         list = key and ns.tracker:States(key, now)
     end
     list = list or {}
+    if bar.fit then Fit(bar, math.max(#list, 1)) end
     for i, icon in ipairs(bar.icons) do
         local s = list[i]
         if s then
@@ -148,9 +212,8 @@ function ns.ApplyDisplay()
     local grow = GROW[ns.db.grow] or GROW.RIGHT
     local point, dx, dy = grow[1], grow[2], grow[3]
     local step = size + (dy == 0 and GAP or GAP + TEXT_GAP)
-    local length = MAX_ICONS * step - (step - size)
     for _, bar in ipairs(bars) do
-        if dy == 0 then bar:SetSize(length, size) else bar:SetSize(size, length) end
+        bar.size, bar.step, bar.vertical = size, step, dy ~= 0
         for i, icon in ipairs(bar.icons) do
             icon:SetSize(size, size)
             icon:ClearAllPoints()
@@ -160,7 +223,10 @@ function ns.ApplyDisplay()
         bar:EnableMouse(unlocked)
         bar.background:SetShown(unlocked)
         bar.label:SetShown(unlocked)
-        bar:SetShown(ns.db[bar.option] or unlocked)
+        local editing = ns.editing == bar.unit
+        bar:SetShown(ns.db[bar.option] or unlocked or editing)
+        -- Editandola, por encima de la ventana de Opciones
+        bar:SetFrameStrata(editing and "FULLSCREEN_DIALOG" or "MEDIUM")
         Place(bar)
     end
     ns.Refresh()
@@ -187,8 +253,26 @@ function ns.SetBarOffset(unit, x, y)
     Place(barsByUnit[unit])
 end
 
+-- Pegar la fila a un punto de su marco; nil = sin pegar (arrastrada o al pixel)
+function ns.SetBarAnchor(unit, at)
+    ns.db.pos[unit] = { at = at }
+    Place(barsByUnit[unit])
+end
+
+function ns.GetBarAnchor(unit)
+    local pos = ns.db.pos[unit]
+    if not pos then return "TOPLEFT" end -- la de por defecto: encima, a la izquierda
+    return pos.at
+end
+
 function ns.ResetPositions()
     ns.db.pos = {}
+    ns.ApplyDisplay()
+end
+
+-- Fila que se esta colocando en Posicion (nil al cerrarla)
+function ns.SetEditing(unit)
+    ns.editing = unit
     ns.ApplyDisplay()
 end
 
@@ -197,6 +281,13 @@ function ns.CreateDisplay()
         bars[#bars + 1] = CreateBar(info)
         barsByUnit[info.unit] = bars[#bars]
     end
+    overlay = CreateFrame("Frame", nil, UIParent)
+    overlay:SetFrameStrata("FULLSCREEN_DIALOG")
+    overlay:Hide()
+    local tint = overlay:CreateTexture(nil, "BACKGROUND")
+    tint:SetAllPoints()
+    tint:SetColorTexture(0.77, 0.5, 0.95, 0.15)
+    refreshOverlay = ns.CreateAnchorDots(overlay, function() return ns.editing end)
     ns.ApplyDisplay()
     -- Quita los iconos al reiniciarse el DR (y ve cambios de objetivo del grupo)
     C_Timer.NewTicker(0.25, ns.Refresh)

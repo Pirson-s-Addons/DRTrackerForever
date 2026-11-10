@@ -63,3 +63,5 @@ L["POS_ROW_TOOLTIP"] = "Which row the sliders below move. Unlock the icons to se
 L["POS_X"] = "Horizontal"
 L["POS_Y"] = "Vertical"
 L["POS_TOOLTIP"] = "Distance in pixels from the centre of the screen to the centre of the row. You can also drag the rows while they are unlocked."
+L["POS_ANCHOR"] = "Attach to its frame"
+L["POS_ANCHOR_TOOLTIP"] = "Click a dot to stick the row to that corner or side of its frame, just outside it. Dragging the row or using the sliders unsticks it."

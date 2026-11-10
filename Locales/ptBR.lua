@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Qual linha os controles abaixo movem. Desbloqueie os íc
 L["POS_X"] = "Horizontal"
 L["POS_Y"] = "Vertical"
 L["POS_TOOLTIP"] = "Distância em pixels do centro da tela até o centro da linha. Você também pode arrastar as linhas enquanto estão desbloqueadas."
+L["POS_ANCHOR"] = "Prender ao quadro"
+L["POS_ANCHOR_TOOLTIP"] = "Clique em um ponto para prender a fileira a esse canto ou lado do seu quadro, logo do lado de fora. Arrastá-la ou usar os controles deslizantes a solta."

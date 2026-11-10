@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Qué fila mueven los deslizadores de abajo. Desbloquea l
 L["POS_X"] = "Horizontal"
 L["POS_Y"] = "Vertical"
 L["POS_TOOLTIP"] = "Distancia en píxeles del centro de la pantalla al centro de la fila. También puedes arrastrar las filas mientras están desbloqueadas."
+L["POS_ANCHOR"] = "Pegar a su marco"
+L["POS_ANCHOR_TOOLTIP"] = "Pulsa un punto para pegar la fila a esa esquina o lado de su marco, justo por fuera. Arrastrarla o usar los deslizadores la despega."

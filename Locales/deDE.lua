@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Welche Zeile die Regler unten verschieben. Entsperre die
 L["POS_X"] = "Horizontal"
 L["POS_Y"] = "Vertikal"
 L["POS_TOOLTIP"] = "Abstand in Pixeln von der Bildschirmmitte zur Mitte der Zeile. Entsperrt kannst du die Zeilen auch ziehen."
+L["POS_ANCHOR"] = "An den Rahmen heften"
+L["POS_ANCHOR_TOOLTIP"] = "Klicke auf einen Punkt, um die Reihe direkt außen an diese Ecke oder Seite ihres Rahmens zu heften. Ziehen oder die Schieberegler lösen sie wieder."

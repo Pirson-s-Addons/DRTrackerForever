@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "La rangée que déplacent les curseurs ci-dessous. Déve
 L["POS_X"] = "Horizontale"
 L["POS_Y"] = "Verticale"
 L["POS_TOOLTIP"] = "Distance en pixels entre le centre de l'écran et le centre de la rangée. Tu peux aussi faire glisser les rangées quand elles sont déverrouillées."
+L["POS_ANCHOR"] = "Attacher à son cadre"
+L["POS_ANCHOR_TOOLTIP"] = "Cliquez sur un point pour coller la rangée à ce coin ou ce côté de son cadre, juste à l'extérieur. La faire glisser ou utiliser les curseurs la détache."

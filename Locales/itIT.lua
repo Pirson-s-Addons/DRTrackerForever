@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Quale riga spostano i cursori qui sotto. Sblocca le icon
 L["POS_X"] = "Orizzontale"
 L["POS_Y"] = "Verticale"
 L["POS_TOOLTIP"] = "Distanza in pixel dal centro dello schermo al centro della riga. Puoi anche trascinare le righe quando sono sbloccate."
+L["POS_ANCHOR"] = "Attacca al suo riquadro"
+L["POS_ANCHOR_TOOLTIP"] = "Clicca un punto per attaccare la fila a quell'angolo o lato del suo riquadro, appena all'esterno. Trascinarla o usare i cursori la stacca."

@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Vilken rad reglagen nedan flyttar. Lås upp ikonerna fö
 L["POS_X"] = "Vågrätt"
 L["POS_Y"] = "Lodrätt"
 L["POS_TOOLTIP"] = "Avstånd i pixlar från skärmens mitt till radens mitt. Upplåsta rader kan du också dra."
+L["POS_ANCHOR"] = "Fäst vid ramen"
+L["POS_ANCHOR_TOOLTIP"] = "Klicka på en punkt för att fästa raden vid det hörnet eller den sidan av sin ram, precis utanför. Att dra raden eller använda reglagen lossar den."

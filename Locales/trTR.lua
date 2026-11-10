@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Aşağıdaki kaydırıcıların hangi satırı taşıdı
 L["POS_X"] = "Yatay"
 L["POS_Y"] = "Dikey"
 L["POS_TOOLTIP"] = "Ekranın ortasından satırın ortasına piksel cinsinden uzaklık. Kilidi açıkken satırları sürükleyebilirsin de."
+L["POS_ANCHOR"] = "Çerçevesine tuttur"
+L["POS_ANCHOR_TOOLTIP"] = "Satırı çerçevesinin o köşesine veya kenarına, hemen dışına tutturmak için bir noktaya tıkla. Satırı sürüklemek veya kaydırıcıları kullanmak onu ayırır."

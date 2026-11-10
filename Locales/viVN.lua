@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Hàng mà các thanh trượt bên dưới di chuyển. 
 L["POS_X"] = "Ngang"
 L["POS_Y"] = "Dọc"
 L["POS_TOOLTIP"] = "Khoảng cách tính bằng pixel từ giữa màn hình đến giữa hàng. Khi mở khóa, bạn cũng có thể kéo các hàng."
+L["POS_ANCHOR"] = "Gắn vào khung"
+L["POS_ANCHOR_TOOLTIP"] = "Nhấp vào một điểm để gắn hàng vào góc hoặc cạnh đó của khung, ngay bên ngoài. Kéo hàng hoặc dùng thanh trượt sẽ tách nó ra."

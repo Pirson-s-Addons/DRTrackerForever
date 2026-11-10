@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Kterou řadu posouvají posuvníky níže. Odemkni ikony
 L["POS_X"] = "Vodorovně"
 L["POS_Y"] = "Svisle"
 L["POS_TOOLTIP"] = "Vzdálenost v pixelech od středu obrazovky ke středu řady. Odemčené řady můžeš také přetáhnout."
+L["POS_ANCHOR"] = "Připnout k rámečku"
+L["POS_ANCHOR_TOOLTIP"] = "Klikni na bod a řada se připne k tomu rohu nebo straně svého rámečku, těsně vně. Přetažení řady nebo posuvníky ji odepnou."

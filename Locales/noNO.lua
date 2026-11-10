@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Hvilken rad glidebryterne under flytter. Lås opp ikonen
 L["POS_X"] = "Vannrett"
 L["POS_Y"] = "Loddrett"
 L["POS_TOOLTIP"] = "Avstand i piksler fra midten av skjermen til midten av raden. Opplåste rader kan du også dra."
+L["POS_ANCHOR"] = "Fest til rammen"
+L["POS_ANCHOR_TOOLTIP"] = "Klikk på et punkt for å feste raden til det hjørnet eller den siden av rammen, like utenfor. Å dra raden eller bruke glidebryterne løsner den."

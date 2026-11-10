@@ -61,3 +61,5 @@ L["POS_ROW_TOOLTIP"] = "Który rząd przesuwają suwaki poniżej. Odblokuj ikony
 L["POS_X"] = "Poziomo"
 L["POS_Y"] = "Pionowo"
 L["POS_TOOLTIP"] = "Odległość w pikselach od środka ekranu do środka rzędu. Odblokowane rzędy możesz też przeciągać."
+L["POS_ANCHOR"] = "Przyczep do ramki"
+L["POS_ANCHOR_TOOLTIP"] = "Kliknij punkt, aby przyczepić rząd do tego rogu lub boku jego ramki, tuż na zewnątrz. Przeciągnięcie rzędu lub suwaki go odczepiają."

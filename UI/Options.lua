@@ -202,20 +202,61 @@ function ns.CreateOptions()
     local rows = {}
     for _, info in ipairs(ns.BARS) do rows[#rows + 1] = { info.unit, L[info.label] } end
     position:Dropdown("row", L.POS_ROW, L.POS_ROW_TOOLTIP, -86, rows,
-        function() return editUnit end, function(value) editUnit = value end)
+        function() return editUnit end, function(value)
+            editUnit = value
+            ns.SetEditing(value)
+        end)
+    -- Abierta: la fila elegida se ve de verdad, con muestra y puntos sobre su marco
+    position.panel:HookScript("OnShow", function() ns.SetEditing(editUnit) end)
+    position.panel:HookScript("OnHide", function() ns.SetEditing(nil) end)
+    -- Muestra del marco con un punto en cada esquina y lado: pega la fila alli
+    local anchorText = position.panel:CreateFontString(nil, "ARTWORK", "GameFontHighlight")
+    anchorText:SetPoint("TOPLEFT", X, -126)
+    anchorText:SetText(L.POS_ANCHOR)
+    local box = CreateFrame("Frame", nil, position.panel)
+    box:SetSize(180, 56)
+    box:SetPoint("TOPLEFT", X + 110, -170)
+    local edge = box:CreateTexture(nil, "BACKGROUND")
+    edge:SetAllPoints()
+    edge:SetColorTexture(1, 1, 1, 0.3)
+    local fill = box:CreateTexture(nil, "BORDER")
+    fill:SetPoint("TOPLEFT", 1, -1)
+    fill:SetPoint("BOTTOMRIGHT", -1, 1)
+    fill:SetColorTexture(0, 0, 0, 0.8)
+    local boxLabel = box:CreateFontString(nil, "ARTWORK", "GameFontNormal")
+    boxLabel:SetPoint("CENTER")
+    local strip = box:CreateTexture(nil, "ARTWORK")
+    strip:SetColorTexture(0.77, 0.5, 0.95, 0.8)
+    local refreshDots = ns.CreateAnchorDots(box, function() return editUnit end)
+    box.Refresh = function()
+        refreshDots()
+        local current = ns.GetBarAnchor(editUnit)
+        for _, info in ipairs(ns.BARS) do
+            if info.unit == editUnit then boxLabel:SetText(L[info.label]) end
+        end
+        strip:ClearAllPoints()
+        strip:SetShown(current ~= nil)
+        if not current then return end
+        local o = ns.OUTSIDE[current]
+        local vertical = db.grow == "UP" or db.grow == "DOWN"
+        strip:SetSize(vertical and 10 or 54, vertical and 54 or 10)
+        strip:SetPoint(o[1], box, current, o[2] * 3, o[3] * 3) -- x3: que no lo tapen los puntos
+    end
+    position.widgets[#position.widgets + 1] = box
+
     local halfW = math.floor(UIParent:GetWidth() / 2)
     local halfH = math.floor(UIParent:GetHeight() / 2)
     position:Slider({
         name = "posX",
         get = function() return (ns.GetBarOffset(editUnit)) end,
         set = function(value) ns.SetBarOffset(editUnit, value, nil) end,
-    }, L.POS_X, L.POS_TOOLTIP, -137, -halfW, halfW, 1, Pixels)
+    }, L.POS_X, L.POS_TOOLTIP, -290, -halfW, halfW, 1, Pixels)
     position:Slider({
         name = "posY",
         get = function() return select(2, ns.GetBarOffset(editUnit)) end,
         set = function(value) ns.SetBarOffset(editUnit, nil, value) end,
-    }, L.POS_Y, L.POS_TOOLTIP, -187, -halfH, halfH, 1, Pixels)
-    position:Finish(-227)
+    }, L.POS_Y, L.POS_TOOLTIP, -340, -halfH, halfH, 1, Pixels)
+    position:Finish(-380)
 
     local root = ns.CreateAbout({
         name = "DR Tracker Forever",
