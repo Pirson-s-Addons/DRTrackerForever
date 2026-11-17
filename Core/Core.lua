@@ -60,3 +60,9 @@ frame:SetScript("OnEvent", function(self)
     SLASH_DRTRACKERFOREVER1 = "/drf"
     SlashCmdList.DRTRACKERFOREVER = Command
 end)
+
+-- Menu de addons del minimapa (## AddonCompartmentFunc del .toc): lo mismo que el comando
+function DRTrackerForever_OnAddonCompartmentClick()
+    local open = SlashCmdList and SlashCmdList.DRTRACKERFOREVER
+    if open then open("") end
+end
