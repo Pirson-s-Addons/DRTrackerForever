@@ -1,17 +1,20 @@
-<h1 align="center">DR Tracker Forever</h1>
+<p align="center"><a href="https://www.curseforge.com/wow/addons/dr-tracker-forever"><img src="https://raw.githubusercontent.com/Pirson-s-Addons/.github/main/profile/assets/readme-dr-en.svg" width="100%" alt="DR Tracker Forever"/></a></p>
+
+<p align="center"><b>English</b> · <a href="README.es.md">Español</a></p>
 
 <p align="center">
-  <b>Diminishing returns (DR) of crowd control on your target, your focus and you, for World of Warcraft: Forever</b>
+<a href="https://www.curseforge.com/wow/addons/dr-tracker-forever"><b>CurseForge</b></a> ·
+<a href="https://github.com/Pirson-s-Addons/DRTrackerForever/releases/latest"><b>Download</b></a>
 </p>
 
-<p align="center">
-<img src="https://img.shields.io/badge/WoW_Forever-1.60.1-C4B5FD?style=for-the-badge">
-<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-E9D5FF?style=for-the-badge"></a>
-</p>
+## Screenshots
 
-<p align="center"><a href="README.es.md">🇪🇸 Español</a></p>
-
----
+<table>
+<tr>
+<td align="center" width="50%"><img src="https://media.forgecdn.net/attachments/2059/131/screenshot_2-png.png" alt="Two crowd control categories"><br><sub>Two crowd control categories</sub></td>
+<td align="center" width="50%"><img src="https://media.forgecdn.net/attachments/2059/130/screenshot_3-png.png" alt="Diminishing returns step by step"><br><sub>Diminishing returns step by step</sub></td>
+</tr>
+</table>
 
 ## What it does
 
@@ -31,4 +34,6 @@ effects the game lets addons see (all of them out of combat).
 - `/drf test` — sample icons for 20 seconds
 - `/drf clear` — forget every tracked DR
 
-**Author**: Pirson — GitHub: https://github.com/Pirson-s-Addons
+<br/>
+
+<p align="center"><a href="https://github.com/Pirson-s-Addons"><img src="https://raw.githubusercontent.com/Pirson-s-Addons/.github/main/profile/assets/readme-footer-en.svg" width="100%" alt="Part of Pirson's Addons. See all addons."/></a></p>
