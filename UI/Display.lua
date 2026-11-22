@@ -160,7 +160,7 @@ function ns.PreviewStates(now)
     return {
         { category = "stun", count = 1, at = now - 2, resetAt = now + 18, spellID = 408 },
         { category = "incapacitate", count = 2, at = now - 5, resetAt = now + 15, spellID = 118 },
-        { category = "disorient", count = 3, at = now - 8, resetAt = now + 12, spellID = 5782 },
+        { category = "fear", count = 3, at = now - 8, resetAt = now + 12, spellID = 5782 },
     }
 end
 

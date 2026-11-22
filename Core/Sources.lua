@@ -21,8 +21,8 @@ local MISSES = { MISS = true, RESIST = true, DODGE = true, PARRY = true, EVADE =
 local FEEDBACK_WINDOW = 0.5 -- s tras el lanzamiento en que un fallo es de ese control
 local WATCHED = { "target", "focus", "player" }
 -- Perdida de control sin hechizo en la lista: su tipo dice la categoria
-local LOC_CATEGORY = { STUN = "stun", STUN_MECHANIC = "stun", FEAR = "disorient", FEAR_MECHANIC = "disorient",
-    CONFUSE = "incapacitate", SILENCE = "silence", ROOT = "root", DISARM = "disarm" }
+local LOC_CATEGORY = { STUN = "stun", STUN_MECHANIC = "stun", FEAR = "fear", FEAR_MECHANIC = "fear",
+    CONFUSE = "incapacitate", ROOT = "root" }
 
 local function Secret(value) return issecretvalue ~= nil and issecretvalue(value) end
 local function Readable(value) return value ~= nil and not Secret(value) end
