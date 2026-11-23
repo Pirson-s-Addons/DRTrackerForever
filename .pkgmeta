@@ -1,0 +1,5 @@
+package-as: DRTrackerForever
+
+manual-changelog:
+  filename: CHANGELOG.md
+  markup-type: markdown
